@@ -7,12 +7,12 @@ public class PerfectNumbers {
 
       System.out.println("Print prime numbers 1-100");
       getPerfectNumber(100);
-      System.out.println();
-      System.out.println("Print prime numbers 1-100");
-      getPerfectNumber(1000);
-      System.out.println();
-      System.out.println("Print prime numbers 1-1000");
-      getPerfectNumber(10000);
+//      System.out.println();
+//      System.out.println("Print prime numbers 1-100");
+//      getPerfectNumber(1000);
+//      System.out.println();
+//      System.out.println("Print prime numbers 1-1000");
+//      getPerfectNumber(10000);
 
    }
 
