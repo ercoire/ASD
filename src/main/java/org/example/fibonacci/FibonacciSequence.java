@@ -4,7 +4,9 @@ public class FibonacciSequence {
 
    public static void main(String[] args) {
       fibonacciAll(69);
-      fibonacci(5);
+      fibonacci(69);
+      fibonacci(13);
+      fibonacci(21);
    }
 
    static void fibonacciAll(int limit) {
