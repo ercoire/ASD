@@ -21,12 +21,12 @@ public class BookLibrary {
    }
    //...
 
-   public int listBooksInHandsOf(LibraryUser libraryUser) {
-//      List<Book> borrowedBooks = new ArrayList<>();
+   public List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
+      List<Book> borrowedBooks = new ArrayList<>();
 //      if rentABook(LibraryUser libraryUser, Book book) {
 //         borrowedBooks.add(book);
 //      }
 //      borrowedBooks.size();
-      return 0;
+      return borrowedBooks;
    }
 }
