@@ -99,30 +99,21 @@ public class BookDirectoryTestSuite {
    @DisplayName("Tests for books borrowed by user")
    class TestBooksInHandsOf {
 
-
-
-//         testUser.setFirstName() = "TestFirst";
-//         testUser.setLastName() = "TestLast";
-//         testUser.setPeselID() = "12345";
-
-
-
       @Test
       void shouldReturnZeroForNoBorrowedBooks() {
 
 
          // Given
-         //jest użytkownik i mock
          List<Book> borrowedBooks = new ArrayList<>();
          BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
          LibraryUser testUser = new LibraryUser();
          when(libraryDatabaseMock.listBooksInHandsOf(testUser)).thenReturn(borrowedBooks);
 
-         // When
-         libraryDatabaseMock.listBooksInHandsOf(testUser);
+         //When
+         List<Book> result = bookLibrary.listBooksInHandsOf(testUser);
 
-         // Then
-         assertEquals(0, borrowedBooks.size());  //size listy pożyczonych
+         //Then
+         assertEquals(0, result.size());
       }
 
       @Test
@@ -136,10 +127,10 @@ public class BookDirectoryTestSuite {
          when(libraryDatabaseMock.listBooksInHandsOf(testUser)).thenReturn(borrowedBooks);
 
          //When
-         libraryDatabaseMock.listBooksInHandsOf(testUser);
+         List<Book> result = bookLibrary.listBooksInHandsOf(testUser);
 
          //Then
-         assertEquals(1, borrowedBooks.size());
+         assertEquals(1, result.size());
       }
 
       @Test
@@ -161,10 +152,10 @@ public class BookDirectoryTestSuite {
          borrowedBooks.add(book5);
 
          //When
-         libraryDatabaseMock.listBooksInHandsOf(testUser);
+         List<Book> result = bookLibrary.listBooksInHandsOf(testUser);
 
          //Then
-         assertEquals(5, borrowedBooks.size());
+         assertEquals(5, result.size());
       }
 
    }
