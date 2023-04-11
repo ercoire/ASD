@@ -26,7 +26,6 @@ public class BookLibrary {
 //      if rentABook(LibraryUser libraryUser, Book book) {
 //         borrowedBooks.add(book);
 //      }
-//      borrowedBooks.size();
       return borrowedBooks;
    }
 }

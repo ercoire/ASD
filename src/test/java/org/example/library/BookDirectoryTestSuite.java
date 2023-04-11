@@ -102,7 +102,6 @@ public class BookDirectoryTestSuite {
       @Test
       void shouldReturnZeroForNoBorrowedBooks() {
 
-
          // Given
          List<Book> borrowedBooks = new ArrayList<>();
          BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
@@ -135,6 +134,7 @@ public class BookDirectoryTestSuite {
 
       @Test
       void shouldReturn5When5BooksBorrowed() {
+
          //Given
          BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
          LibraryUser testUser = new LibraryUser();
@@ -150,6 +150,7 @@ public class BookDirectoryTestSuite {
          borrowedBooks.add(book3);
          borrowedBooks.add(book4);
          borrowedBooks.add(book5);
+         when(libraryDatabaseMock.listBooksInHandsOf(testUser)).thenReturn(borrowedBooks);
 
          //When
          List<Book> result = bookLibrary.listBooksInHandsOf(testUser);
