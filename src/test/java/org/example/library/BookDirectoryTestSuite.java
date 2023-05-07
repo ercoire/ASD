@@ -151,7 +151,7 @@ public class BookDirectoryTestSuite {
          borrowedBooks.add(book4);
          borrowedBooks.add(book5);
          when(libraryDatabaseMock.listBooksInHandsOf(testUser)).thenReturn(borrowedBooks);
-
+         System.out.println("test");
          //When
          List<Book> result = bookLibrary.listBooksInHandsOf(testUser);
 
